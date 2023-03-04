@@ -484,7 +484,7 @@
     var modalText = {
         modal1 : {
             title : 'DX Engineer',
-            hashtag : '#SW아키텍처 #인프라아키텍처 #데이터아키텍처 #모델링 #클라우드 #MSA #Cloud Native #최적화',
+            hashtag : '#SW아키텍처 -#인프라아키텍처 -#데이터아키텍처 -#모델링 -#클라우드 -#MSA -#Cloud Native -#최적화',
             works:[
                 '디지털 금융, 지능형 정부, 스마트시티, 스마트 교통 서비스 등 편리하고 보다 나은 삶을 위한 변화를 이끌어갑니다. ',
                 '다양한 산업의 프로젝트 경험과 IT 신기술로 고객 맞춤형 서비스를 제공하며, 고객 비즈니스에 가치를 더하는 일을 합니다. ',
@@ -500,7 +500,7 @@
         },
         modal2 : {
             title : 'Cloud Architecture',
-            hashtag : '#SW아키텍처 #인프라아키텍처 #데이터아키텍처 #모델링 #문제해결 #클라우드 #MSA #Cloud Native #Bigdata #AI #최적화',
+            hashtag : '#SW아키텍처 -#인프라아키텍처 -#데이터아키텍처 -#모델링 -#문제해결 -#클라우드 -#MSA -#Cloud Native -#Bigdata -#AI -#최적화',
             works:[
                 '국내 최대 규모의 아키텍트를 보유하고 있으며, 고객사의 성공적인 Digital Transformation을 달성하기 위한 아키텍처 환경을 설계/구축하는 최정예 전문가 그룹입니다.',
                 '인프라, 어플리이션, 데이터를 아우르는 아키텍처 전 영역에서 Cloud, MSA, CloudNative 개발 및 AI 기반 개발을 리딩합니다. ',
@@ -516,7 +516,7 @@
         },
         modal3 : {
             title : 'Entrue Consulting',
-            hashtag : '#컨설팅 #제조 #금융 #공공 #PI #클라우드 #최적화 #DigitalTransformation #SCM #스마트시티 #TotalExperience',
+            hashtag : '#컨설팅 -#제조 -#금융 -#공공 -#PI -#클라우드 -#최적화 -#DigitalTransformation -#SCM -#스마트시티 -#TotalExperience',
             works:[
                 '제조, 통신, 서비스, 금융, 공공 등 다양한 산업별 트렌드를 기반으로 인사이트를 도출하고, Digital Transformation 전략을 수립합니다.  ',
                 'Cloud, Smart Factory, Data Governance등 디지털 신기술 및 솔루션 기반의 컨설팅을 수행합니다. ',
@@ -531,7 +531,7 @@
         },
         modal4 : {
             title : 'AI',
-            hashtag : '#AI #머신러닝 #딥러닝 #AI모델링 #VISION #시각화AI #챗봇 #언어AI',
+            hashtag : '#AI -#머신러닝 -#딥러닝 -#AI모델링 -#VISION -#시각화AI -#챗봇 -#언어AI',
             works:[
                 '최신 AI/딥러닝 알고리즘을 분석 및 검증하여 경량화, 최적화하는 일을 수행합니다. ',
                 '고객사 비즈니스 환경에 적합한 AI 모델을 설계하고 구축/운영합니다. ',
@@ -547,7 +547,7 @@
         },
         modal5 : {
             title : 'ERP',
-            hashtag : '#ERP컨설팅 #차세대ERP #지능화ERP #SAP #AI #DATA #기술&도메인전문가',
+            hashtag : '#ERP컨설팅 -#차세대ERP -#지능화ERP -#SAP -#AI -#DATA -#기술&도메인전문가',
             works:[
                 "기업 IT시스템의 근간이 되는 ERP시스템을 설계/구축/운영하는 일을 합니다.  ",
                 "ERP는 기업의 데이터 및 주요 업무 프로세스를 연계하고, 실시간 데이터를 공유하는 기록의 시스템입니다.  ",
@@ -665,8 +665,11 @@
                 }
                 $('#modal01').addClass('on');
                 $('.dim').addClass('on');
+                $('#modal01').find('.modal-cont').scrollTop(0)
                 $('#modal01').find('.modal-header .tit').text(modalName.title);
-                $('#modal01').find('.modal-header .hash-tag').text(modalName.hashtag);
+                for(var i=0;i<modalName.hashtag.split('-').length; i++){
+                    $('#modal01').find('.modal-header .hash-tag').append('<span>'+modalName.hashtag.split('-')[i]+'</span>')
+                }
 
                 for(var i=0;i<modalName.works.length; i++){
                     $('#modal01').find('.list-wrap.list1').append('<li>'+modalName.works[i]+'</li>')
@@ -686,6 +689,9 @@
                 opacity:0
             },200, function(){
                 $modal.removeClass('on');
+                $modal.find('.modal-header .hash-tag span').remove();
+                $modal.find('.list-wrap.list1 li').remove();
+                $modal.find('.list-wrap.list2 li').remove();
                 $modal.removeAttr('style');
                 $('html').css('overflow-y', '')
             });
