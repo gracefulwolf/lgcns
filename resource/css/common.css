@@ -293,7 +293,7 @@ section{padding:130px 0;}
 }
 @media screen and (max-width: 960px) {
   .menu{display:block;width:2.4rem;height:2.4rem;position:relative;margin-left:auto;}
-  .menu .line{position:absolute;left:50%; width:calc(100% - 4px);height:1px;background:#fff;transform: translateX(-50%);transition: 0.3s;background-color: red;}
+  .menu .line{position:absolute;left:50%; width:calc(100% - 4px);height:1px;background:#fff;transform: translateX(-50%);transition: 0.3s;}
   .menu .line.n1{top:4px;}
   .menu .line.n2{top:50%;margin-top:-1px}
   .menu .line.n3{bottom:4px;}
