@@ -161,7 +161,12 @@ section{padding:130px 0;}
 
 
 [data-animation]{opacity: 0;-webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);}
-[data-animation].aniOn{animation-name: fadeInUp;animation-duration: 0.5s;animation-timing-function: cubic-bezier(0.44,0.01,0.64,0.99);animation-fill-mode: forwards;animation-delay:0.21s;}
+[data-animation].aniOn{
+  -webkit-animation: fadeInUp .5s forwards 0.21s cubic-bezier(0.44,0.01,0.64,0.99);
+  -moz-animation: fadeInUp .5s forwards 0.21s cubic-bezier(0.44,0.01,0.64,0.99);
+  -o-animation: fadeInUp .5s forwards 0.21s cubic-bezier(0.44,0.01,0.64,0.99);
+  animation: fadeInUp .5s forwards 0.21s cubic-bezier(0.44,0.01,0.64,0.99);
+}
 
 .section01 .text-wrap [data-animation]{transition: 0s;}
 .section01 .text-wrap [data-animation].aniOn{animation-delay:0.2s}
@@ -169,6 +174,40 @@ section{padding:130px 0;}
 
 
 
+
+@-o-keyframes fadeInUp{
+  from {
+		opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@-moz-keyframes fadeInUp{
+  from {
+		opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@-webkit-keyframes fadeInUp{
+  from {
+		opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -180,6 +219,38 @@ section{padding:130px 0;}
 		transform: none;
 	}
 }
+
+@-o-keyframes modalShow{
+ from {
+		opacity: 0;
+    transform: translate(-50%, -40%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+@-moz-keyframes modalShow{
+ from {
+		opacity: 0;
+    transform: translate(-50%, -40%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+@-webkit-keyframes modalShow{
+ from {
+		opacity: 0;
+    transform: translate(-50%, -40%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
 @keyframes modalShow {
 	from {
 		opacity: 0;
