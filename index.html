@@ -466,14 +466,21 @@
         },
 		pagination: {
           el: ".recruitment-slide .swiper-pagination",
-		  clickable: true,
           type: "fraction",
         },
         breakpoints: {
             960: {
             touchRatio: 0,
             },
-        }
+        },
+        on: {
+            slideChange : function(swiper) {
+                setTimeout(()=>{
+                    swiper.autoplay.start()
+                },300)
+                
+            }
+        },
 	});
 
     var benefitSwiper = new Swiper(".benefit-slide .swiper", {
@@ -500,12 +507,24 @@
             960: {
                 touchRatio: 0,
             },
-        }
+        },
+        on: {
+            slideChange : function(swiper) {
+                setTimeout(()=>{
+                    swiper.autoplay.start()
+                },300)
+                
+            }
+        },
 	});
     var youtubeSwiper = new Swiper(".youtube-slide .swiper", {
         observer: true,	
         observeParents: true,	
-        touchRatio: 0,
+        touchRatio: 1,
+        loop: true,
+        // autoplay: {
+		// 	delay: 4000,
+		// },
 		navigation: {
           nextEl: ".youtube-slide .swiper-button-next",
           prevEl: ".youtube-slide .swiper-button-prev",
@@ -515,7 +534,29 @@
 		  clickable: true,
           type: "fraction",
         },
+        breakpoints: {
+            960: {
+                touchRatio: 0,
+            },
+        },
+        on: {
+            slideChange : function(swiper) {
+                setTimeout(()=>{
+                    //swiper.autoplay.start()
+                })
+                
+            }
+        },
 	});
+
+    // $(document).on('click','.youtube-slide .swiper-button-prev', function(e){
+	// 	e.preventDefault();
+	// 	youtubeSwiper.autoplay.start()
+	// })
+	// $(document).on('click','.youtube-slide .swiper-button-next', function(e){
+	// 	e.preventDefault();
+	// 	youtubeSwiper.autoplay.start()
+	// })
 
     var modalText = {
         modal1 : {
