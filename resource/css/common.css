@@ -300,7 +300,7 @@ section{padding:130px 0;}
   .gnb-wrap{height:5.5rem;}
   .gnb-wrap .util{display:none;}
   .gnb-wrap .inner{height:5.5rem;}
-  .visual-wrap{margin-top:5.5rem;max-height:46.0rem;padding-top:9.0rem;background-image: url(../images/main_image_m.png);background-size:100%;}
+  .visual-wrap{margin-top:5.5rem;max-height:46.0rem;padding-top:9.0rem;background-image: url(../images/main_image_m.png);background-size:cover;}
   .visual-wrap .img-title{width:26.9rem;height:11.8rem;}
   .visual-wrap .text-wrap{padding-top:2.0rem;}
   .visual-wrap .text-wrap p{font-size:2.0rem;line-height:2.8rem;}
