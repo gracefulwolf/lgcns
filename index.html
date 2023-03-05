@@ -684,16 +684,18 @@
             
         })
     
-
+        if ($(window).width() < 960) {
+            $('#modal01').css({
+                'bottom' : $('#modal01').outerHeight(true) * -1 + 'px'
+            })
+        }
         $(document).on('click', '[data-modal]', function(e){
             e.preventDefault();
             var winW = $(window).width();
             var modal = $(this).data('modal');
             var dim = '<div class="dim"></div>'
             $('body').prepend(dim);
-            // if (winW < 750) {
-                
-            // }
+            
             $('html').css('overflow-y', 'hidden')
 
             setTimeout(function(){
@@ -718,7 +720,10 @@
                     console.log('modalName default')
                     break
                 }
-                $('#modal01').addClass('on');
+                $('#modal01').addClass('on').animate({
+                    bottom:0,
+                    opacity:1
+                })
                 $('.dim').addClass('on');
                 $('#modal01').find('.modal-cont').scrollTop(0)
                 $('#modal01').find('.modal-header .tit').text(modalName.title);
@@ -752,22 +757,23 @@
             var $modal = $(this).parents('.modal');
 
             $modal.stop().animate({
-                opacity:0
+                opacity:0,
+                'bottom' : $('#modal01').outerHeight(true) * -1 + 'px'
             },200, function(){
                 $modal.removeClass('on');
                 $modal.find('.modal-header .tit2').text('');
-                $modal.find('.modal-header .hash-tag span').remove();
+                $modal.find('.hash-tag span').remove();
                 $modal.find('.list-wrap.list1 li').remove();
                 $modal.find('.list-wrap.list2 li').remove();
                 $modal.find('.list-wrap.list3 li').remove();
                 $modal.find('.list-wrap.list4 li').remove();
-                $modal.removeAttr('style');
                 $('html').css('overflow-y', '')
             });
             $('.dim').stop().animate({
                 opacity:0
             },200, function(){
                 $('.dim').remove();
+                
             })
             
         })
