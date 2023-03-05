@@ -2,6 +2,7 @@
 .only-pc{display:block !important;}
 .only-mob{display:none !important;}
 
+.menu {display:none;}
 .inner{position:relative;margin:0 auto;width:800px;}
 .title{font-size:48px;line-height: 1;font-weight:700}
 .title2{font-size:28px;color:#309064;font-weight:700;}
@@ -291,6 +292,11 @@ section{padding:130px 0;}
   
 }
 @media screen and (max-width: 960px) {
+  .menu{display:block;width:2.4rem;height:2.4rem;position:relative;margin-left:auto;}
+  .menu .line{position:absolute;left:50%; width:calc(100% - 4px);height:1px;background:#fff;transform: translateX(-50%);}
+  .menu .line.n1{top:4px;}
+  .menu .line.n2{top:50%;margin-top:-1px}
+  .menu .line.n3{bottom:4px;}
   .swiper .swiper-button-prev:hover,
 .swiper .swiper-button-next:hover{transform: scale(1);transition: 1s;}
   section{padding:6rem 0 6.8rem;}
