@@ -376,6 +376,7 @@ section{padding:130px 0;}
   .btn-wrap.bottom .btn:last-child{background:#333;}
   .btn-wrap.bottom .btn:hover{    transform: scale(1);}
 
+  .section-bg .image-item{display: none;}
   .modal{width:100%;height:calc(100% - 10%);bottom:0;transform: none;top:auto;bottom:0;left:0;border-bottom-right-radius:0;border-bottom-left-radius: 0;}
   .modal .modal-header{padding:2.4rem 2.4rem 1rem;}
   .modal .tit{font-size:2.2rem}
