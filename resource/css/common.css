@@ -390,7 +390,7 @@ section{padding:130px 0;}
   .modal.on{animation: none;}
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 360px) {
   .visual-wrap{
     max-height:40rem;
   }
