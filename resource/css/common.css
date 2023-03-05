@@ -293,18 +293,27 @@ section{padding:130px 0;}
 }
 @media screen and (max-width: 960px) {
   .menu{display:block;width:2.4rem;height:2.4rem;position:relative;margin-left:auto;}
-  .menu .line{position:absolute;left:50%; width:calc(100% - 4px);height:1px;background:#fff;transform: translateX(-50%);}
+  .menu .line{position:absolute;left:50%; width:calc(100% - 4px);height:1px;background:#fff;transform: translateX(-50%);transition: 0.3s;}
   .menu .line.n1{top:4px;}
   .menu .line.n2{top:50%;margin-top:-1px}
   .menu .line.n3{bottom:4px;}
+  .menu.active .line.n1{height:2px;top:11px;transform: translateX(-50%) rotate(45deg);}
+  .menu.active .line.n2{height:2px;opacity: 0;}
+  .menu.active .line.n3{height:2px;bottom:11px;transform: translateX(-50%) rotate(-45deg);}
   .swiper .swiper-button-prev:hover,
-.swiper .swiper-button-next:hover{transform: scale(1);transition: 1s;}
+  .swiper .swiper-button-next:hover{transform: scale(1);transition: 1s;}
   section{padding:6rem 0 6.8rem;}
   .title{font-size:2.4rem;}
   .inner{width:100%;padding:0 2.4rem;}
   .list-wrap li{margin-top:.5rem;line-height:2.0rem;}
   .gnb-wrap{height:5.5rem;}
-  .gnb-wrap .util{display:none;}
+  .gnb-wrap .util .nav-wrap {display:none;}
+  .gnb-wrap .util .nav-wrap.on {position: absolute;top: 5.5rem;left: 0;width: 100%;background: #3da079;text-align: left;padding:0 2.4rem 2rem;}
+  .gnb-wrap .util .nav-wrap.on a{display:block;font-size:2.0rem;line-height: 5.2rem;margin:0;}
+  .gnb-wrap .util .nav-wrap  a:hover{transform: none;}
+
+
+  .gnb-wrap .util .btn-wrap {display:none;}
   .gnb-wrap .inner{height:5.5rem;}
   .visual-wrap{margin-top:5.5rem;max-height:46.0rem;padding-top:9.0rem;background-image: url(../images/main_image_m.png);background-size:cover;}
   .visual-wrap .img-title{width:26.9rem;height:11.8rem;}
@@ -324,13 +333,13 @@ section{padding:130px 0;}
   .part-wrap .part-box dd:first-of-type{margin-top:2.0rem;}
   .part-box{margin-top:2.5rem;}
 
-  .recruitment-slide{margin:4.1rem 0 auto;}
+  .recruitment-slide{margin:5.1rem 0 auto;}
   .recruitment-slide .swiper{padding:0 0 6.6rem;}
   .recruitment-slide .swiper-slide{width:21.7rem;}
   .recruitment-slide .recruitment-item{width:100%;height:20.3rem;padding:2.4rem 1.6rem 2rem;}
   .recruitment-slide .recruitment-item .hash-tag{width:100% !important;}
   .recruitment-slide .recruitment-item .hash-tag span{font-size:1.2rem;}
-
+  .section03{margin-top:2.0rem;}
   .swiper .swiper-control{width:100%;}
   .swiper .swiper-button-next{right:2.4rem;}
   .swiper .swiper-button-prev{left:2.4rem;}
