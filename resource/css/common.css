@@ -163,9 +163,8 @@ section{padding:130px 0;}
 .modal .modal-cont .sub-tit:first-child{margin-top:0;}
 .modal .tit{font-size:40px;color:#000;font-weight:700;}
 .modal .tit2{font-size:20px;color:#999;font-weight:400;margin-top:-5px;margin-bottom:5px;}
-.modal .hash-tag{word-break: break-word;}
+.modal .hash-tag{word-break: break-word;margin-lefT:-5px;}
 .modal .hash-tag span{display:inline-block;font-size:16px;color:#999;font-weight:400;margin-top:0;line-height: 24px;margin-left:5px;}
-.modal .hash-tag span:first-child{margin-left:0;}
 .modal .sub-tit{margin-top:30px;font-size:24px;color: #111;font-weight: 700;}
 .modal .list-wrap{margin-top:18px;}
 .modal .list-wrap li{word-break: keep-all;}
@@ -341,6 +340,7 @@ section{padding:130px 0;}
   .youtube-wrap .youtube-box{width:100%;height:18.0rem;}
 
   .section-bg{background:#eff2f1;}
+  #section01{padding-top:7rem}
   .section02{padding:4.0rem 0 5.0rem;}
 
   .part-wrap{display: block;margin-top:4.0rem;}
