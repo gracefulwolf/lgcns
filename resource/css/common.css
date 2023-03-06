@@ -68,7 +68,7 @@ section{padding:130px 0;}
 
 .section-bg .image-item{position:Absolute;}
 .section-bg .image-item.n1{top: -435px; right: -540px;width:1173px;height:1861px;background:url(../images/image_item01.png) 0 0 no-repeat;background-size:100%;}
-.section-bg .image-item.n2{bottom: -240px;left: -767px;width:1273px;height:1208.4px;background:url(../images/image_item02.png) 0 0 no-repeat;background-size:100%;}
+.section-bg .image-item.n2{bottom: -320px;left: -767px;width:1273px;height:1208.4px;background:url(../images/image_item02.png) 0 0 no-repeat;background-size:100%;}
 .section-bg .image-item.n3{bottom: -200px;right: -860px;;width:1273px;height:1208.4px;background:url(../images/image_item02.png) 0 0 no-repeat;background-size:100%; animation-delay:1s}
 
 
