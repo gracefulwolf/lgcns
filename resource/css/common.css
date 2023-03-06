@@ -290,8 +290,13 @@ section{padding:130px 0;}
   .benefit-slide{width:100%;}
   
 }
+@media screen and (max-width: 1710px) {
+  .section-bg .image-item.n1{right:-900px}
+  
+}
 @media screen and (max-width: 1510px) {
   .recruitment-slide{width:100%;}
+  .section-bg .image-item.n1{right:-1000px}
   
 }
 @media screen and (max-width: 960px) {
