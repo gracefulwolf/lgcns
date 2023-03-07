@@ -57,7 +57,7 @@ section{padding:130px 0;}
 .part-wrap .part-box dd:before{content:'◆';position:absolute;top:3px;left:0;font-size:14px;}
 .part-wrap .part-box dd:first-of-type{margin-top:30px;}
 .part-wrap .part-box dd p{flex:0 100%;color:#ababac;margin-top:3px;}
-.part-wrap .part-box dd .lable{font-size:12px;color:#fff;font-weight:700;padding:3px 7px 2px 7px;border-radius: 4px;display: flex;align-items: center;justify-content: center;margin-left:12px;position:relative;top:-2px;}
+.part-wrap .part-box dd .lable{font-size:12px;color:#fff;font-weight:700;padding:3px 7px 2px 7px;border-radius: 4px;display: flex;align-items: center;justify-content: center;margin-left:12px;position:relative;top:0;}
 .part-wrap .part-box dd .lable + .lable{margin-left:5px;}
 .part-wrap .part-box dd .lable.type01{background:#ea236f}
 .part-wrap .part-box dd .lable.type02{background:#935ad7}
